@@ -3,6 +3,8 @@ $(document).ready(function(){
         var onSuccess = function(position) {
             initialize(position.coords.latitude,position.coords.longitude);
         };
+        var lat = position.coords.latitude,
+        var lon = position.coords.longitude,
         
         // onError Callback receives a PositionError object
         //
@@ -14,9 +16,9 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }, false);
 });
 
-function initialize(){
+function initialize(lat,lon){
     //Posición del mapa
-    var latlng = new google.maps.LatLng();
+    var latlng = new google.maps.LatLng(lat, lon);
     var myOptions = {
         zoom: 8,
         center: latlng,
