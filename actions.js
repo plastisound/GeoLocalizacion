@@ -14,9 +14,9 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }, false);
 });
 
-function initialize(lat,lon){
+function initialize(){
     //Posición del mapa
-    var latlng = new google.maps.LatLng(lat, lon);
+    var latlng = new google.maps.LatLng();
     var myOptions = {
         zoom: 8,
         center: latlng,
