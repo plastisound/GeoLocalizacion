@@ -3,8 +3,7 @@ $(document).ready(function(){
         var onSuccess = function(position) {
             initialize(position.coords.latitude,position.coords.longitude);
         };
-        var lat = position.coords.latitude;
-        var lon = position.coords.longitude;        
+        
         // onError Callback receives a PositionError object
         //
         function onError(error) {
